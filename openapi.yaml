@@ -93,6 +93,8 @@ components:
       required:
         - title
       properties:
+        mediaType:
+          $ref: "#/components/schemas/MediaType"
         title:
           type: string
           description: The title of the book
@@ -174,3 +176,14 @@ components:
           type: string
           description: The sequence of the book in the series. Omit if there's no sequence.
           example: "1"
+
+    MediaType:
+      type: string
+      description: |
+        The media type of the book
+
+        Clients should fall back to `unknown` for backwards compatibility
+      enum:
+        - book
+        - audiobook
+        - unknown
