@@ -1,0 +1,5 @@
+[tools]
+"npm:@scalar/cli" = "latest"
+
+[tasks.watch-openapi]
+run = "scalar document serve openapi.yaml --watch"

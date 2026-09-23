@@ -56,6 +56,8 @@ paths:
                 properties:
                   error:
                     type: string
+                    description: The error message
+                    example: "Invalid query parameter"
         "401":
           description: Unauthorized
           content:
@@ -65,6 +67,8 @@ paths:
                 properties:
                   error:
                     type: string
+                    description: The error message
+                    example: "Unauthorized"
         "500":
           description: Internal Server Error
           content:
@@ -74,6 +78,8 @@ paths:
                 properties:
                   error:
                     type: string
+                    description: The error message
+                    example: "Internal Server Error"
 components:
   securitySchemes:
     api_key:
@@ -89,45 +95,71 @@ components:
       properties:
         title:
           type: string
+          description: The title of the book
+          example: Babel
         subtitle:
           type: string
+          description: The subtitle of the book
+          example: "Or the Necessity of Violence: An Arcane History of The Oxford Translators' Revolution"
         author:
           type: string
+          description: The author of the book
+          example: R. F. Kuang
         narrator:
           type: string
+          description: The narrator of the book
+          example: Chris Lew Kum Hoi,Billie Fulford-Brown
         publisher:
           type: string
+          description: The publisher of the book
+          example: HarperCollins
         publishedYear:
           type: string
+          description: The year the book was published
+          example: "2022"
         description:
           type: string
+          description: The description of the book
+          example: "A new dark academic fantasy by the New York Times bestselling author of The Poppy War..."
         cover:
           type: string
           description: URL to the cover image
+          example: "https://example.com/books/kuang/babel/cover.jpg"
         isbn:
           type: string
           format: isbn
+          description: The ISBN of the book
+          example: "9780063021457"
         asin:
           type: string
           format: asin
+          description: The ASIN of the book
+          example: "B09MD95S5V"
         genres:
           type: array
           items:
             type: string
+          description: The genres of the book
+          example: ["Fantasy", "Historical Fiction", "Dark Academia"]
         tags:
           type: array
           items:
             type: string
+          description: The tags of the book
+          example: ["secret society", "violent", "victorian", "dark academia"]
         series:
           type: array
           items:
             $ref: "#/components/schemas/SeriesMetadata"
         language:
           type: string
+          description: The language of the book
+          example: "English"
         duration:
           type: integer
           format: int64
           description: Duration in minutes
+          example: 1306
 
     SeriesMetadata:
       type: object
@@ -136,5 +168,9 @@ components:
       properties:
         series:
           type: string
+          description: The series of the book
+          example: "Middle Earth"
         sequence:
           type: string
+          description: The sequence of the book in the series. Omit if there's no sequence.
+          example: "1"
