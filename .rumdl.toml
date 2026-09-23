@@ -1,0 +1,11 @@
+[global]
+flavor = "gfm"
+
+[MD013]
+line_length = 100
+reflow = true
+reflow_mode = "normalize"
+
+[MD060]
+enabled = true
+style = "aligned"
