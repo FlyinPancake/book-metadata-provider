@@ -1,3 +1,5 @@
+name: Validate Spec
+
 on:
   push:
     branches:
@@ -8,10 +10,11 @@ on:
 
 jobs:
   validate:
+    name: Scalar Validate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
       - uses: jdx/mise-action@v4
         with:
-          install_args: '"npm:@scalar/cli"'
+          install_args: 'node "npm:@scalar/cli"'
       - run: mise validate-openapi

@@ -1,4 +1,5 @@
 [tools]
+node = "24"
 "npm:@scalar/cli" = { version = "2.5.2", trust_policy_excludes = ["rollup"] }
 
 [tasks.watch-openapi]
