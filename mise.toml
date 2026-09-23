@@ -3,3 +3,6 @@
 
 [tasks.watch-openapi]
 run = "scalar document serve openapi.yaml --watch"
+
+[tasks.validate-openapi]
+run = "scalar document validate openapi.yaml"
