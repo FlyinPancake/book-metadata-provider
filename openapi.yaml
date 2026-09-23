@@ -104,9 +104,18 @@ components:
           description: The subtitle of the book
           example: "Or the Necessity of Violence: An Arcane History of The Oxford Translators' Revolution"
         author:
+          deprecated: true
           type: string
           description: The author of the book
           example: R. F. Kuang
+        authors:
+          type: array
+          items:
+            type: string
+          description: The authors of the book
+          example:
+            - Susanne Valenti
+            - Caroline Peckham
         narrator:
           type: string
           description: The narrator of the book
