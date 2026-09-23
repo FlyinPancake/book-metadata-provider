@@ -6,7 +6,7 @@ servers:
 
 info:
   title: Book Metadata Provider
-  version: 0.1.0
+  version: 1.0.0
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT
@@ -34,6 +34,11 @@ paths:
           required: false
           schema:
             type: string
+        - name: mediaType
+          in: query
+          required: false
+          schema:
+            $ref: "#/components/schemas/MediaType"
 
       responses:
         "200":
@@ -93,6 +98,8 @@ components:
       required:
         - title
       properties:
+        mediaType:
+          $ref: "#/components/schemas/MediaType"
         title:
           type: string
           description: The title of the book
@@ -102,13 +109,32 @@ components:
           description: The subtitle of the book
           example: "Or the Necessity of Violence: An Arcane History of The Oxford Translators' Revolution"
         author:
+          deprecated: true
           type: string
           description: The author of the book
           example: R. F. Kuang
+        authors:
+          type: array
+          items:
+            type: string
+          description: The authors of the book
+          example:
+            - Susanne Valenti
+            - Caroline Peckham
         narrator:
+          deprecated: true
           type: string
           description: The narrator of the book
           example: Chris Lew Kum Hoi,Billie Fulford-Brown
+
+        narrators:
+          type: array
+          items:
+            type: string
+          description: The narrators of the book
+          example:
+            - Chris Lew Kum Hoi
+            - Billie Fulford-Brown
         publisher:
           type: string
           description: The publisher of the book
@@ -174,3 +200,14 @@ components:
           type: string
           description: The sequence of the book in the series. Omit if there's no sequence.
           example: "1"
+
+    MediaType:
+      type: string
+      description: |
+        The media type of the book
+
+        Clients should fall back to `unknown` for backwards compatibility
+      enum:
+        - book
+        - audiobook
+        - unknown
