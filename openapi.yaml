@@ -153,9 +153,20 @@ components:
           example: "https://example.com/books/kuang/babel/cover.jpg"
         isbn:
           type: string
+          deprecated: true
           format: isbn
           description: The ISBN of the book
           example: "9780063021457"
+        isbn13:
+          type: string
+          format: isbn
+          description: The ISBN-13 of the book
+          example: "9780063021457"
+        isbn10:
+          type: string
+          format: isbn
+          description: The ISBN-10 of the book
+          example: "0063021457"
         asin:
           type: string
           format: asin
