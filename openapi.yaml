@@ -34,6 +34,11 @@ paths:
           required: false
           schema:
             type: string
+        - name: mediaType
+          in: query
+          required: false
+          schema:
+            $ref: "#/components/schemas/MediaType"
 
       responses:
         "200":
