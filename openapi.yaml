@@ -143,6 +143,10 @@ components:
           type: string
           description: The year the book was published
           example: "2022"
+        publishedDate:
+          type: string
+          description: The date the book was published
+          example: "2022-01-01"
         description:
           type: string
           description: The description of the book
