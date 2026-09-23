@@ -1,5 +1,9 @@
 [tools]
-"npm:@scalar/cli" = "latest"
+node = "24"
+"npm:@scalar/cli" = { version = "2.5.2", trust_policy_excludes = ["rollup"] }
 
 [tasks.watch-openapi]
 run = "scalar document serve openapi.yaml --watch"
+
+[tasks.validate-openapi]
+run = "scalar document validate openapi.yaml"
