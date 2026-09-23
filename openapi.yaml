@@ -117,9 +117,19 @@ components:
             - Susanne Valenti
             - Caroline Peckham
         narrator:
+          deprecated: true
           type: string
           description: The narrator of the book
           example: Chris Lew Kum Hoi,Billie Fulford-Brown
+
+        narrators:
+          type: array
+          items:
+            type: string
+          description: The narrators of the book
+          example:
+            - Chris Lew Kum Hoi
+            - Billie Fulford-Brown
         publisher:
           type: string
           description: The publisher of the book
