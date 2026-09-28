@@ -145,7 +145,10 @@ components:
           example: "2022"
         publishedDate:
           type: string
-          description: The date the book was published
+          description: |
+            The date the book was published
+
+            If both `publishedYear` and `publishedDate` are provided, `publishedDate` takes precedence.
           example: "2022-01-01"
         description:
           type: string
