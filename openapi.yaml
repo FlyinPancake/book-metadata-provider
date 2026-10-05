@@ -85,6 +85,18 @@ paths:
                     type: string
                     description: The error message
                     example: "Internal Server Error"
+  /provider/info:
+    get:
+      summary: Get provider information
+      description: Returns information about the provider, including the provider name and version.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProviderInfo"
+
 components:
   securitySchemes:
     api_key:
@@ -230,3 +242,23 @@ components:
         - book
         - audiobook
         - unknown
+
+    ProviderInfo:
+      type: object
+      properties:
+        name:
+          type: string
+          description: The name of the provider
+          example: "Book Metadata Provider"
+        version:
+          type: string
+          description: The version of the provider
+          example: "1.0.0"
+        avatarUrl:
+          type: string
+          description: The URL of the provider's avatar
+          example: "https://example.com/avatar.png"
+        authenticationRequired:
+          type: boolean
+          description: Whether authentication is required to use the provider
+          example: false
