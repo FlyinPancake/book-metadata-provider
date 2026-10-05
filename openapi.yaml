@@ -166,7 +166,7 @@ components:
           type: string
           format: isbn
           description: The ISBN-10 of the book
-          example: "0063021457"
+          example: "0063021455"
         asin:
           type: string
           format: asin
