@@ -145,6 +145,7 @@ components:
           example: "2022"
         publishedDate:
           type: string
+          format: date
           description: |
             The date the book was published
 
