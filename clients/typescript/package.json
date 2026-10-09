@@ -1,0 +1,21 @@
+{
+  "name": "@book-metadata-provider/client",
+  "type": "module",
+  "module": "src/index.ts",
+  "scripts": {
+    "generate-types": "openapi-ts",
+    "lint": "oxlint",
+    "format": "oxfmt",
+    "format:fix": "oxfmt --fix"
+  },
+  "dependencies": {
+    "temporal-polyfill": "^1.0.5"
+  },
+  "devDependencies": {
+    "@hey-api/openapi-ts": "^0.99.0",
+    "@types/bun": "latest",
+    "oxfmt": "^0.70.0",
+    "oxlint": "^1.85.0",
+    "typescript": "~5.9.3"
+  }
+}
