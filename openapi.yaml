@@ -213,9 +213,9 @@ components:
         series:
           type: array
           description: |
-            The series that the book belongs to. Omit if the book is not part of a series.
+            The series that the book belongs to. Omitted if the book is not part of a series.
 
-            If the book is part of multiple series lists them all, in order of importance.
+            If the book is part of multiple series, lists them all in order of importance.
             If a book is a combination of multiple parts of a series, lists each part as a separate series entry.
           items:
             $ref: "#/components/schemas/SeriesMetadata"
@@ -241,7 +241,7 @@ components:
         sequence:
           type: string
           description: |
-            The sequence of the book in the series. Omit if there's no sequence.
+            The sequence of the book in the series. Omitted if there's no sequence.
 
             Kept for backwards compatibility. Servers and clients implementing 1.0.0 should prefer `sequenceNumber` instead.
           example: "1"
@@ -249,11 +249,11 @@ components:
         sequenceNumber:
           type: number
           description: |
-            The sequence of the book in the series. Omit if there's no sequence. May be fractional or even negative.
+            The sequence of the book in the series. Omitted if there's no sequence. May be fractional or even negative.
           example: 1
         totalInSeries:
           type: integer
-          description: The total number of books in the series. Omit if unknown.
+          description: The total number of books in the series. Omitted if unknown.
           example: 3
 
     MediaType:
