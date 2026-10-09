@@ -3,18 +3,17 @@
   "type": "module",
   "module": "src/index.ts",
   "scripts": {
-    "generate-types": "openapi-typescript ../../openapi.yaml -o src/api/schema.d.ts",
+    "generate-types": "openapi-ts",
     "lint": "oxlint",
     "format": "oxfmt",
     "format:fix": "oxfmt --fix"
   },
   "dependencies": {
-    "openapi-fetch": "^0.17.0",
     "temporal-polyfill": "^1.0.5"
   },
   "devDependencies": {
+    "@hey-api/openapi-ts": "^0.99.0",
     "@types/bun": "latest",
-    "openapi-typescript": "^7.13.0",
     "oxfmt": "^0.70.0",
     "oxlint": "^1.85.0",
     "typescript": "~5.9.3"
