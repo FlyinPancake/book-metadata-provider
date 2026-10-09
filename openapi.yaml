@@ -104,6 +104,11 @@ components:
       type: apiKey
       name: AUTHORIZATION
       in: header
+      description: |
+        The API key to access the provider. The API key should be provided in the `Authorization` header.
+        As an example, a Bearer token can be used, however the client should always ask for the complete contents for the `Authorization` header from the user, and not assume that it is a Bearer token.
+
+        Servers that don't require authentication can omit this security scheme, but they should handle the `Authorization` header gracefully if it is provided.
 
   schemas:
     BookMetadata:
