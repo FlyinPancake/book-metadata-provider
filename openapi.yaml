@@ -221,8 +221,32 @@ components:
             $ref: "#/components/schemas/SeriesMetadata"
         language:
           type: string
-          description: The language of the book
+          description: |
+            The language of the book
+
+            In 1.0.0 Used primarily for user-facing purposes, and not for metadata.
           example: "English"
+        languageCode:
+          type: string
+          description: |
+            The language code of the book in IETF BCP 47 format
+
+            This should be preferred over `language` for metadata purposes.
+          example: "en"
+        originalLanguage:
+          type: string
+          description: |
+            The original language of the book
+
+            In 1.0.0 Used primarily for user-facing purposes, and not for metadata.
+          example: "Chinese"
+        originalLanguageCode:
+          type: string
+          description: |
+            The original language code of the book in IETF BCP 47 format
+
+            This should be preferred over `originalLanguage` for metadata purposes.
+          example: "zh"
         duration:
           type: integer
           format: int64
