@@ -260,6 +260,11 @@ components:
           type: integer
           description: The number of pages in the book
           example: 512
+        textDirection:
+          type: array
+          enum:
+            - leftToRight
+            - rightToLeft
 
     SeriesMetadata:
       type: object
