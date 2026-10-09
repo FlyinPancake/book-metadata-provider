@@ -228,6 +228,10 @@ components:
           format: int64
           description: Duration in minutes
           example: 1306
+        pages:
+          type: integer
+          description: The number of pages in the book
+          example: 512
 
     SeriesMetadata:
       type: object
