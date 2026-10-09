@@ -89,6 +89,7 @@ paths:
     get:
       summary: Get provider information
       description: Returns information about the provider, including the provider name and version.
+      security: []
       responses:
         "200":
           description: OK
