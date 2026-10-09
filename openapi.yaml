@@ -118,6 +118,10 @@ components:
       properties:
         mediaType:
           $ref: "#/components/schemas/MediaType"
+        providerId:
+          type: string
+          description: The unique identifier of the book in the provider's system
+          example: "r-f-kuang-babel"
         title:
           type: string
           description: The title of the book
